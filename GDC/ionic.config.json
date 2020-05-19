@@ -1,0 +1,7 @@
+{
+  "name": "GDC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
