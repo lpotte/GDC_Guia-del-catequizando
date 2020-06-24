@@ -29,8 +29,8 @@ const OsoPuma: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>EL OSO Y EL PUMA<br/></IonTitle><br/>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>EL OSO Y EL PUMA<br/></IonTitle><br/>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>

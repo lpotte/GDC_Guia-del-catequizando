@@ -29,8 +29,8 @@ const AmorDios: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>EL AMOR DE DIOS<br/></IonTitle><br/>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>EL AMOR DE DIOS<br/></IonTitle><br/>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>

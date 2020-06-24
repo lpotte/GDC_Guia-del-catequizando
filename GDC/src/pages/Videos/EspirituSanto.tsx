@@ -29,8 +29,8 @@ const EspirituSanto: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>El Espiritu Santo<br/></IonTitle><br/>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>El Espiritu Santo<br/></IonTitle><br/>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>

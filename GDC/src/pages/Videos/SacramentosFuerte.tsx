@@ -29,8 +29,8 @@ const SacramentosFuerte: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>LOS SACRAMENTOS TE HARAN FUERTE<br/></IonTitle><br/>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>LOS SACRAMENTOS TE HARAN FUERTE<br/></IonTitle><br/>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>

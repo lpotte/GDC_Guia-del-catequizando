@@ -29,8 +29,8 @@ const Francisco: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>RELACION ENTRE FAMILIA Y COMUNIDAD - PAPA FRANCISCO<br/></IonTitle><br/>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>RELACION ENTRE FAMILIA Y COMUNIDAD - PAPA FRANCISCO<br/></IonTitle><br/>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>

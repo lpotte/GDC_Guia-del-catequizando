@@ -29,8 +29,8 @@ const CofesionV: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <div style={{position: 'absolute', left: '5%', right: '5%', textAlign: 'center'}}>
-                    <IonTitle color="primary"><br/>CONTRICCION, CONFESION, PENITENCIA<br/></IonTitle>
+                <div style={{textAlign: 'center'}}>
+                    <IonTitle color="primary" size="small"><br/>CONTRICCION, CONFESION, PENITENCIA<br/></IonTitle>
                     <VideoEmbebido Videos={Videos} />
                 </div>
             </IonContent>
