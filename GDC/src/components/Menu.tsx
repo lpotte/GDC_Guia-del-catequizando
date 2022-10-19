@@ -1,45 +1,76 @@
 import {
   IonContent,
-  IonHeader,
   IonIcon,
   IonItem,
   IonLabel,
   IonList,
+  IonListHeader,
   IonMenu,
   IonMenuToggle,
-  IonTitle,
-  IonToolbar
+  IonNote,
 } from '@ionic/react';
-import React from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { AppPage } from '../declarations';
 
-interface MenuProps extends RouteComponentProps {
-  appPages: AppPage[];
+import { useLocation } from 'react-router-dom';
+import { archiveOutline, archiveSharp, book, bookmarkOutline, create, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, videocam, warningOutline, warningSharp } from 'ionicons/icons';
+import './Menu.css';
+
+interface AppPage {
+  url: string;
+  iosIcon: string;
+  mdIcon: string;
+  title: string;
 }
 
-const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
-  <IonMenu contentId="main" type="overlay" >
-    <IonHeader>
-      <IonToolbar mode="ios" color="tertiary">
-        <IonTitle >Menu</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-    <IonContent>
-      <IonList lines="full">
-        {appPages.map((appPage, index) => {
-          return (
-            <IonMenuToggle key={index} autoHide={false}>
-              <IonItem routerLink={appPage.url} routerDirection="none" mode="ios">
-                <IonIcon slot="start"  icon={appPage.icon} color="tertiary"/>
-                <IonLabel>{appPage.title}</IonLabel>
-              </IonItem>
-            </IonMenuToggle>
-          );
-        })}
-      </IonList>
-    </IonContent>
-  </IonMenu>
-);
+const appPages: AppPage[] = [
+  {
+    title: 'Entrada',
+    url: '/page/Home',
+    iosIcon: mailOutline,
+    mdIcon: mailSharp
+  },
+  {
+    title: 'Oraciones',
+    url: '/home/oraciones',
+    iosIcon: book,
+    mdIcon: book
+  },
+  {
+    title: 'Catecismo',
+    url: '/home/ZonaAP',
+    iosIcon: create,
+    mdIcon: create
+  },
+  {
+    title: 'Videos Reflexión',
+    url: '/home/videos',
+    iosIcon: videocam,
+    mdIcon: videocam
+  }
+];
 
-export default withRouter(Menu);
+const Menu: React.FC = () => {
+  const location = useLocation();
+
+  return (
+    <IonMenu contentId="main" type="overlay">
+      <IonContent>
+        <IonList id="inbox-list">
+          <IonListHeader>GDC</IonListHeader>
+          <IonNote>Guía Del Catequizando</IonNote>
+          {appPages.map((appPage, index) => {
+            return (
+              <IonMenuToggle key={index} autoHide={false}>
+                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                  <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
+                  <IonLabel>{appPage.title}</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+            );
+          })}
+        </IonList>
+      </IonContent>
+    </IonMenu>
+  );
+};
+
+export default Menu;

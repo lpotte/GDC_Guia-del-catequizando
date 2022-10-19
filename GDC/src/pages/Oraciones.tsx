@@ -40,6 +40,11 @@ const appPages: AppPage[] = [
         icon: bookmark
     },
     {
+        title: 'Credo Largo',
+        url: '/home/oraciones/credoniceno',
+        icon: bookmark
+    },
+    {
         title: 'Credo',
         url: '/home/oraciones/credo',
         icon: bookmark
@@ -69,14 +74,13 @@ const appPages: AppPage[] = [
         url: '/home/oraciones/Yopecador',
         icon: bookmark
     }
-
 ];
 
 const Oraciones: React.FC = () => {
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar mode="ios" color="primary">
+                <IonToolbar color="primary">
                 <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>

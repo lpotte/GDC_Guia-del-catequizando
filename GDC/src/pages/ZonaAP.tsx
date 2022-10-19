@@ -1,8 +1,8 @@
-import {IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar} from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import Lista from "../components/Lista";
-import {AppPage} from "../declarations";
-import {bookmarks} from 'ionicons/icons';
+import { AppPage } from "../declarations";
+import { bookmarks } from 'ionicons/icons';
 
 const appPages: AppPage[] = [
     {
@@ -84,21 +84,21 @@ const appPages: AppPage[] = [
         title: 'Las Virtudes Teologales',
         url: '/home/zonaap/Virtudes',
         icon: bookmarks
-    }, 
+    },
 ];
 
 const ListPage: React.FC = () => {
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar mode="ios" color="primary">
+                <IonToolbar color="primary">
                     <IonButtons slot="start">
                         <IonMenuButton />
                     </IonButtons>
-                    <IonTitle>Zona DAP</IonTitle>
+                    <IonTitle>Elementos Del Catecismo</IonTitle>
                 </IonToolbar>
             </IonHeader>
-            <IonContent>
+            <IonContent >
                 <Lista appPages={appPages} />
             </IonContent>
         </IonPage>

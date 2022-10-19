@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { YoutubePlayerWeb } from 'capacitor-youtube-player';
+import { YoutubePlayer } from 'capacitor-youtube-player';
 
 import { Plugins, Capacitor } from '@capacitor/core';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
@@ -17,7 +17,7 @@ const VideoEmbebido: React.FunctionComponent<VideoProps> = ({Videos}) => {
     async function initializeYoutubePlayerPluginWeb() {
         console.log('App::initializeYoutubePlayerPluginWeb() | method called');
         const options = {playerId: 'youtube-player', playerSize: {width: 640, height: 360}, videoId: Video.ID, debug: true};
-        const result = await YoutubePlayerWeb.initialize(options);
+        const result = await YoutubePlayer.initialize(options);
         console.log('playerReady', result);
         (result as any).player.addEventListener('onPlaybackQualityChange', (event: any) => {
             console.log('playback quality is', event);
